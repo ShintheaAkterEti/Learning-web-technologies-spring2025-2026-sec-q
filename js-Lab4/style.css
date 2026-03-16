@@ -1,0 +1,22 @@
+body{
+    font-family: Arial;
+    text-align: center;
+    background-color: skyblue;
+}
+
+.container{
+    background: rgb(218, 197, 197);
+    padding: 20px;
+    width: 300px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+input{
+    padding: 6px;
+    width: 160px;
+}
+#Pic{
+    margin-top: 15px;
+    width: 300px;
+}
