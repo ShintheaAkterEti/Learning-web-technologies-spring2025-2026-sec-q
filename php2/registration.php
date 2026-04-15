@@ -1,0 +1,143 @@
+<?php
+
+    if(isset($_REQUEST['submit'])){
+        $username = $_REQUEST['username'];
+        $password = $_REQUEST['password'];
+
+        if($username == "" || $password == ""){
+            echo "null username or password!";
+        }else {
+
+            if($username == $password){
+                echo "valid user!";
+            }else{
+                echo "invalid user!";
+            }
+        }
+    }
+    
+   
+?>
+    
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Profile</title>
+
+<style>
+table{
+width:500px;
+height:300px;
+border:1px solid black;
+border-collapse:collapse;
+}
+td,th{border:1px solid black;}
+</style>
+
+</head>
+<body>
+
+<form onsubmit="return Form()">
+
+<table>
+
+<thead>
+<tr>
+<th colspan="3">Person Profile</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Name</td>
+<td><input type="text" id="name"></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Password</td>
+<td><input type="password" id="password"></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Gender</td>
+<td>
+<input type="radio" name="gender" value="Male">Male
+<input type="radio" name="gender" value="Female">Female
+<input type="radio" name="gender" value="Other">Other
+</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Date of Birth</td>
+<td>
+<input type="text" id="day" size="2"> /
+<input type="text" id="month" size="2"> /
+<input type="text" id="year" size="4">
+(dd/mm/yyyy)
+</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Blood Group</td>
+<td>
+<select id="blood">
+<option value="">Select</option>
+<option>+A</option>
+<option>+O</option>
+<option>-O</option>
+<option>+B</option>
+<option>-B</option>
+</select>
+</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Degree</td>
+<td>
+<input type="checkbox" name="degree">SSC
+<input type="checkbox" name="degree">HSC
+<input type="checkbox" name="degree">BSC
+</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Photo</td>
+<td colspan="2">
+<input type="file" id="photo">
+</td>
+</tr>
+
+<tr>
+<td colspan="3" id="msg" style="color:red;"></td>
+</tr>
+
+<tr>
+<td colspan="3" align="right">
+<input type="submit" value="Submit">
+<input type="reset">
+          <a href="dash.php">Dash</a> |
+<a href="registration.php">Registration</a> |
+<a href="login.php">Login</a> |
+<a href="forgot.php">Forgot Password</a><!DOCTYPE html>
+<a href="home.html">Home</a><!DOCTYPE html>
+
+</td>
+</tr>
+<script src="script7.js"></script>
+
+</tbody>
+</table>
+
+</form>
+
+</body>
+
+</html>
