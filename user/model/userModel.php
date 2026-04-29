@@ -15,9 +15,7 @@ function login($user){
     }
 }
 
-function addUser($user){
 
-}
 
 function getUserById($id){
 
@@ -30,4 +28,3 @@ function updateUser($user){
 function deleteUser($id){
 
 }
-

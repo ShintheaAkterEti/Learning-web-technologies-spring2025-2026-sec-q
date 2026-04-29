@@ -34,8 +34,11 @@
             <td><?= $user['email']; ?></td>
             <td>
                 <a href="edit.php?id=<?= $user['id'] ?>">EDIT</a> |
-                <a href="delete.php?id=<?= $user['id'] ?>">DELETE</a> |
-               <a href="details.php?id=<?= $user['id'] ?>">DETAILS</a>
+                   <a href="details.php?id=<?= $user['id'] ?>">Details</a> |
+               <a href="../controller/delete.php?id=<?= $user['id'] ?>" 
+   onclick="return confirm('Are you sure you want to delete this user?')">
+   DELETE
+</a>
             </td>
         </tr>
 

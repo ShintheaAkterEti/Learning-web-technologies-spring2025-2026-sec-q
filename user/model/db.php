@@ -12,5 +12,3 @@
         $con = mysqli_connect($host, $dbuser, $GLOBALS['dbpass'], $GLOBALS['dbname']);
         return $con;
     }
-
-?>

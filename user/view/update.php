@@ -28,4 +28,18 @@
     }else{
         header('location: ../view/user_list.php');
     }
+    function login($user){
+
+    $con = getConnection();
+
+    $username = $user['username'];
+    $password = $user['password'];
+
+    $sql = "SELECT * FROM users 
+            WHERE username='$username' AND password='$password'";
+
+    $result = mysqli_query($con, $sql);
+
+    return (mysqli_num_rows($result) == 1);
+}
 ?>
