@@ -138,4 +138,29 @@ function employeeDetails($id){
 
     return false;
 }
-?>
+
+function regiEmployee($employee){
+    $con = getConnection();
+
+    $name = $employee['employee_name'];
+    $contact = $employee['contact_no'];
+    $username = $employee['username'];
+    $password = $employee['password'];
+    $role = "employee";
+
+    $checkSql = "SELECT * FROM employees WHERE username='$username'";
+    $checkResult = mysqli_query($con, $checkSql);
+
+    if($checkResult && mysqli_num_rows($checkResult) > 0){
+        return "Username already exists";
+    }
+
+    $sql = "INSERT INTO employees(employee_name, contact_no, username, password, role)
+            VALUES('$name', '$contact', '$username', '$password', '$role')";
+
+    if(mysqli_query($con, $sql)){
+        return true;
+    }
+
+    return "Employee could not be added";
+}

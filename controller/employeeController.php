@@ -111,4 +111,33 @@ if(isset($_GET['details'])){
 
     exit;
 }
-?>
+
+if(isset($_POST['regi'])){
+    $name = $_POST['employee_name'];
+    $contact = $_POST['contact_no'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if($name == "" || $contact == "" || $username == "" || $password == ""){
+        header('location: ../view/add_employee.php?error=All fields are required');
+        exit;
+    }
+
+    $employee = [
+        'employee_name' => $name,
+        'contact_no' => $contact,
+        'username' => $username,
+        'password' => $password
+    ];
+
+    $result = regiEmployee($employee);
+
+    if($result === true){
+        header('location: ../view/dashboard.php?success=Employee added successfully');
+    }else{
+        header('location: ../view/add_employee.php?error=' . urlencode($result));
+    }
+
+    exit;
+}
+    ?>

@@ -14,7 +14,10 @@
     <input type="password" name="password"><br><br>
 
     <input type="submit" name="login" value="Login">
+
 </form>
+<a href="registration.php">Regi</a>
+
 
 </body>
 </html>
