@@ -6,6 +6,8 @@
 <body>
 
 <h2>Register New Employee</h2>
+<h3>Register New Employee</h3>
+
 
 <?php
 if(isset($_GET['error'])){
