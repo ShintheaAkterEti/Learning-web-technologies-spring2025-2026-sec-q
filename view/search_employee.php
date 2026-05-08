@@ -11,7 +11,7 @@
 <input type="text" id="search" onkeyup="searchEmployee()" placeholder="Search employee">
 
 <br><br>
-
+ search by name
 <table border="1" cellpadding="10">
     <thead>
         <tr>
