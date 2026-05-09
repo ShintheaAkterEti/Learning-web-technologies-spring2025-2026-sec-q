@@ -16,7 +16,7 @@
     <input type="submit" name="login" value="Login">
 
 </form>
-<a href="registration.php">Regi</a>
+<a href="registration.php">Registration</a>
 
 
 </body>

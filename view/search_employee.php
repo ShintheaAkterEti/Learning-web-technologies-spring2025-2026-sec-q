@@ -7,7 +7,7 @@
 <body>
 
 <h2>Search Employee Information</h2>
-Search By Username|conact_No|Employee_NAME
+
 
 <input type="text" id="search" onkeyup="searchEmployee()" placeholder="Search employee">
 

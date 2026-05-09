@@ -53,9 +53,7 @@ if(isset($_GET['error'])){
         <td>
             <a href="update_employee.php?id=<?php echo $row['id']; ?>">Update</a> |
             <a href="../controller/employeeController.php?delete=<?php echo $row['id']; ?>">Delete</a>
-                    <a href="employee_details.php?id=<?php echo $row['id']; ?>">
-    Details
-</a>
+            <a href="employee_details.php?id=<?php echo $row['id']; ?>">Detail</a>
 
         </td>
     </tr>

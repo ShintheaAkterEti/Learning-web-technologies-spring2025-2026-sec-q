@@ -133,7 +133,7 @@ if(isset($_POST['regi'])){
     $result = regiEmployee($employee);
 
     if($result === true){
-        header('location: ../view/dashboard.php?success=Employee added successfully');
+        header('location: ../view/login.php?success=Employee added successfully');
     }else{
         header('location: ../view/add_employee.php?error=' . urlencode($result));
     }
